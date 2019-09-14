@@ -7,11 +7,7 @@ For details about card formatting, see the [MessageCard reference](https://docs.
 ```go
 package main
 
-import (
-	"log"
-
-	"github.com/NoteToScreen/teams-go/teams"
-)
+import "github.com/NoteToScreen/teams-go/teams"
 
 func main() {
 	url := "<insert webhook URL here>"
