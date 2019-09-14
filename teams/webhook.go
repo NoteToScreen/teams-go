@@ -2,8 +2,8 @@ package teams
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"strings"
 )
@@ -22,20 +22,21 @@ func PostToWebhookWithClient(client *http.Client, url string, card Card) error {
 	if err != nil {
 		return err
 	}
-	log.Println(string(messageJSON))
 
 	resp, err := client.Post(url, "text/json", strings.NewReader(string(messageJSON)))
 	if err != nil {
 		return err
 	}
+	defer resp.Body.Close()
 
 	data, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return err
 	}
 
-	log.Println(string(data))
+	if string(data) != "1" {
+		return fmt.Errorf("teams: unexpected response '%s'", data)
+	}
 
-	defer resp.Body.Close()
 	return nil
 }
