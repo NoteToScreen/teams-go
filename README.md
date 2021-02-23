@@ -1,5 +1,5 @@
 # teams-go
-[![CI status](https://github.com/NoteToScreen/teams-go/workflows/CI/badge.svg)(https://github.com/NoteToScreen/teams-go/actions)]
+[![CI status](https://github.com/NoteToScreen/teams-go/workflows/CI/badge.svg)](https://github.com/NoteToScreen/teams-go/actions
 
 A (very simple) Go library for posting messages to incoming webhooks in Microsoft Teams.
 
