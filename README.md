@@ -1,4 +1,6 @@
 # teams-go
+![CI status](https://github.com/NoteToScreen/teams-go/workflows/CI/badge.svg)
+
 A (very simple) Go library for posting messages to incoming webhooks in Microsoft Teams.
 
 For details about card formatting, see the [MessageCard reference](https://docs.microsoft.com/en-us/outlook/actionable-messages/message-card-reference). (even though it's described as 'legacy', that is actually the only format that the webhooks support) Note that not everything on that page is currently supported.
